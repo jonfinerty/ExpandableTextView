@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <com.jonathanfinerty.expandabletextview.ExpandableTextView
+        android:id="@+id/expandingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/longText" />
+
+    <com.jonathanfinerty.expandabletextview.ExpandableTextViewToggle
+        android:id="@+id/expandingToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:drawablePadding="4dp"
+        app:collapseDrawable="@android:drawable/arrow_up_float"
+        app:collapseText="less"
+        app:collapsibleTextView="@+id/expandingTextView"
+        app:expandDrawable="@android:drawable/arrow_down_float"
+        app:expandText="more"
+        tools:text="more" />
+
+</LinearLayout>
